@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 def snail(xss):
     h = len(xss)
     w = len(xss[0])
