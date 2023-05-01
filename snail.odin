@@ -47,5 +47,5 @@ main :: proc() {
     expected = [dynamic]int{1, 2, 3, 6, 9, 12, 15, 14, 13, 10, 7, 4, 5, 8, 11}
     fmt.println(eq(snail(initial)[:], expected[:]))
 
-    fmt.println("all tests passed.")
+    fmt.println("all tests passed")
 }

@@ -62,7 +62,7 @@ int main(void) {
     all_valid &= validate(result, expected3, sizeof(initial3) / sizeof(int));
     free(result);
 
-    printf(all_valid ? "all tests passed.\n" : "tests failed.\n");
+    printf(all_valid ? "all tests passed\n" : "tests failed\n");
 
     return 0;
 }
