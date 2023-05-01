@@ -1,14 +1,9 @@
 bd = ./build/
 
-all: c d nim odin __python rust
+all: c d nim odin __python rust v
 
 build-run: all
-	$(bd)c
-	$(bd)d
-	$(bd)nim
-	$(bd)odin
-	./snail.py
-	$(bd)rust
+	make run
 
 run:
 	$(bd)c
@@ -17,6 +12,7 @@ run:
 	$(bd)odin
 	./snail.py
 	$(bd)rust
+	$(bd)v
 
 clean:
 	rm -f $(bd)*
@@ -42,5 +38,9 @@ __python: snail.py
 
 rust: snail.rs
 	rustc $^ -o $(bd)$@
+	$(bd)$@
+
+v: snail.v
+	v $^ -o $(bd)$@
 	$(bd)$@
 
